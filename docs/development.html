@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ispacecraft 공개 소개 문서: 기획, 디자인, 개발, 우주선 공학, 과학과 세계관.">
+<meta name="color-scheme" content="dark">
+<title>개발 — 시뮬레이션과 화면을 나누기 · ispacecraft</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#content">본문으로 이동</a>
+<header><a class="brand" href="../index.html">ispacecraft<span>FIELD NOTES / 공개 문서</span></a><a href="https://ispacecraft.com">프로젝트 열기 ↗</a></header>
+<div class="layout">
+<aside><details open><summary>문서 탐색</summary><nav aria-label="분야별 문서"><a href="../index.html">문서 홈</a><a href="../docs/design.html">디자인 — 우주를 보고, 상태를 읽고, 행동하기</a><a href="../docs/development.html" aria-current="page">개발 — 시뮬레이션과 화면을 나누기</a><a href="../docs/editorial.html">공개 문서 편집 기준</a><a href="../docs/engineering.html">우주선 공학 — 움직임과 장비의 연결</a><a href="../docs/getting-started.html">첫 항해 안내</a><a href="../docs/glossary.html">용어집</a><a href="../docs/overview.html">프로젝트 소개</a><a href="../docs/planning.html">기획 — 항해를 이어 가는 선택</a><a href="../docs/roadmap.html">로드맵 — 우주 표현과 탐사의 확장</a><a href="../docs/science.html">과학 — 실제 원리와 프로젝트의 근사</a><a href="../docs/status.html">현재 범위와 FAQ</a><a href="../docs/systems.html">자원과 생존</a><a href="../docs/worldbuilding.html">세계관 — 우주 광석과 개척자들</a></nav></details></aside>
+<main id="content"><div class="eyebrow">BIRDEA / 2026.11.02</div><article><h1 id="section-0">개발 — 시뮬레이션과 화면을 나누기</h1>
+<p>ispacecraft는 TypeScript로 시뮬레이션과 브라우저 앱을 개발하며 Three.js로 3D 장면을 표현합니다. 이 문서는 구현 구조와 개발 원칙을 설명합니다. 앱 소스는 별도 비공개 저장소에서 관리합니다.</p>
+<h2 id="section-1">구조</h2>
+<div class="table-wrap" role="region" aria-label="구성 표" tabindex="0"><table><thead><tr><th scope="col">구성</th><th scope="col">책임</th></tr></thead><tbody><tr><td>시뮬레이션</td><td>이동·비행·궤도·생존·자원·장비 상태 계산</td></tr><tr><td>브라우저 앱</td><td>입력, 화면, 3D 표현, 소리, 저장과 사용자 설정</td></tr><tr><td>협동 연결</td><td>방 생성·참가와 연결 정보 교환, 참가자 상태 전달</td></tr><tr><td>정적 배포</td><td>브라우저 앱과 공개 자료 제공</td></tr></tbody></table></div>
+<p>화면의 애니메이션이 재고나 물리 상태를 임의로 확정하지 않도록 계산과 표현의 책임을 나눕니다. 장비 동작의 진행 상태를 시뮬레이션이 정하면 렌더러가 그 상태를 외형과 효과로 보여 줍니다.</p>
+<h2 id="section-2">화면 없이 검증하는 규칙</h2>
+<p>비행·착륙·채굴·생존 규칙은 화면 없이도 실행할 수 있는 구조로 검사합니다. 저장과 재개 중 광석이 중복 지급되지 않는지, 착륙 능력이 부족한 상태에서 자동 착륙이 허용되지 않는지 같은 결과가 검증 대상입니다.</p>
+<p>브라우저에서는 이동·착석·분사·저장·불러오기 등 실제 사용자 흐름과 화면 오류를 확인합니다. 타입 검사와 정적 검사, 빌드는 별도로 수행합니다. 통과한 검사가 곧 모든 기기의 성능이나 모든 상황의 안전성을 보장하지는 않습니다.</p>
+<h2 id="section-3">재현성과 저장</h2>
+<p>시드와 시간에 따라 생성·계산되는 세계를 다루고, 저장 형식이 바뀔 때 이전 진행을 읽는 경로를 고려합니다. 사용자가 보는 효과 품질과 세계의 자원·장비 상태가 서로 다른 결과를 만들지 않도록 구분합니다.</p>
+<p>현재 저장의 중심은 기기와 브라우저입니다. 클라우드 계정 동기화나 서버가 관리하는 지속 우주를 제공한다는 뜻은 아닙니다.</p>
+<h2 id="section-4">개발 방식</h2>
+<p>기획·설계·결정 이유를 문서에 남기고, AI 에이전트가 구현하며 프로젝트 오너가 검토합니다. 시안은 검토 자료이며 선택되기 전에는 확정 디자인으로 취급하지 않습니다. 작은 변경을 검증하고 통합하는 방식으로 발전시킵니다.</p>
+<p>엔진 교체, Rust/Wasm, WebGPU 등은 장래 검토 대상입니다. 현재 채택된 구현으로 소개하지 않습니다.</p>
+<p><a href="engineering.html">공학</a> · <a href="status.html">현재 범위</a> · <a href="editorial.html">문서 편집 기준</a></p></article><footer><a href="development.md">Markdown 원문</a> · © 2026 birdea. All rights reserved.</footer></main>
+<nav class="toc" aria-label="이 페이지 목차"><span>이 페이지</span><a href="#section-1">구조</a><a href="#section-2">화면 없이 검증하는 규칙</a><a href="#section-3">재현성과 저장</a><a href="#section-4">개발 방식</a></nav>
+</div>
+</body>
+</html>

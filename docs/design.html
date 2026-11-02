@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ispacecraft 공개 소개 문서: 기획, 디자인, 개발, 우주선 공학, 과학과 세계관.">
+<meta name="color-scheme" content="dark">
+<title>디자인 — 우주를 보고, 상태를 읽고, 행동하기 · ispacecraft</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#content">본문으로 이동</a>
+<header><a class="brand" href="../index.html">ispacecraft<span>FIELD NOTES / 공개 문서</span></a><a href="https://ispacecraft.com">프로젝트 열기 ↗</a></header>
+<div class="layout">
+<aside><details open><summary>문서 탐색</summary><nav aria-label="분야별 문서"><a href="../index.html">문서 홈</a><a href="../docs/design.html" aria-current="page">디자인 — 우주를 보고, 상태를 읽고, 행동하기</a><a href="../docs/development.html">개발 — 시뮬레이션과 화면을 나누기</a><a href="../docs/editorial.html">공개 문서 편집 기준</a><a href="../docs/engineering.html">우주선 공학 — 움직임과 장비의 연결</a><a href="../docs/getting-started.html">첫 항해 안내</a><a href="../docs/glossary.html">용어집</a><a href="../docs/overview.html">프로젝트 소개</a><a href="../docs/planning.html">기획 — 항해를 이어 가는 선택</a><a href="../docs/roadmap.html">로드맵 — 우주 표현과 탐사의 확장</a><a href="../docs/science.html">과학 — 실제 원리와 프로젝트의 근사</a><a href="../docs/status.html">현재 범위와 FAQ</a><a href="../docs/systems.html">자원과 생존</a><a href="../docs/worldbuilding.html">세계관 — 우주 광석과 개척자들</a></nav></details></aside>
+<main id="content"><div class="eyebrow">BIRDEA / 2026.11.02</div><article><h1 id="section-0">디자인 — 우주를 보고, 상태를 읽고, 행동하기</h1>
+<p>화면은 우주를 관찰하는 공간과 조작·정보 영역의 역할을 나눕니다. 상태를 읽고 다음 행동을 찾기 쉽게 만들면서 가운데 3D 장면의 시야를 확보합니다.</p>
+<h2 id="section-1">화면의 역할</h2>
+<div class="table-wrap" role="region" aria-label="영역 표" tabindex="0"><table><thead><tr><th scope="col">영역</th><th scope="col">역할</th></tr></thead><tbody><tr><td>위쪽 상태창</td><td>산소·몸·연료와 현재 상태, 발생한 알림</td></tr><tr><td>AI 패드</td><td>생존·우주선·가방·자원·미디어와 상황별 제안</td></tr><tr><td>네비게이션</td><td>목적지, 운항 상태, 지도와 시간·속도 제어</td></tr><tr><td>아래 매직 버튼</td><td>현재 상황에서 실행할 행동과 조작</td></tr><tr><td>조종 계기판</td><td>조종 중 상세 비행 정보</td></tr><tr><td>가운데 장면</td><td>우주선·천체·지형을 직접 관찰하는 시야</td></tr></tbody></table></div>
+<p>AI 패드는 앱 탐색 레일을 가진 세로형 구성을 기준으로 정보를 모읍니다. 네비게이션은 별도로 유지합니다. 초기 좌우 기둥 패널이나 동심원 게이지 시안은 현재 기준으로 소개하지 않습니다.</p>
+<h2 id="section-2">상태와 행동의 연결</h2>
+<p>알림은 이미 일어난 일을, AI 제안은 지금 할 수 있는 일을 알려 줍니다. 조종석에 앉아야 하는 행동은 자리와 조건을 확인하고, 실행할 수 없는 경우 이유를 보여 주는 방향으로 구성합니다.</p>
+<p>목적지 설정은 항로 초안을 바꾸는 동작입니다. AI 운항 시작은 네비게이션에서 실행하며, 행성·소행성에는 착륙, 정거장에는 도킹처럼 대상에 맞는 행동을 연결합니다.</p>
+<h2 id="section-3">도움 기능</h2>
+<p>보조 비행, 자동 관리, 계기판 숨기기, 매직 버튼 AI 추천을 각각 켜고 끕니다. 훈련생과 조종사는 이 스위치들의 프리셋입니다. 세계가 서로 다른 모드로 갈라지는 방식은 아닙니다. 도움 기능을 바꿔도 생존 수치 자체는 같으며, 보조 비행의 역분사에는 연료가 듭니다.</p>
+<h2 id="section-4">시각 언어</h2>
+<p>짙은 남청색 바탕에 흰색·회색·청색 계열을 사용합니다. 주황·노랑은 경고, 빨강은 위험을 구분하는 역할입니다. 가는 선 아이콘과 일관된 글자·간격을 사용하고, 데스크톱과 좁은 터치 화면에서 같은 정보의 우선순위를 유지합니다.</p>
+<p>태양과 행성은 실사감을 점차 높이고 이후 약한 카툰 쉐이딩을 검토하는 방향입니다. 이 시각 개선은 <a href="roadmap.html">향후 계획</a>이며 현재 완성 수준을 뜻하지 않습니다. 이 공개 문서의 HTML은 같은 색상 계열을 활용한 독서용 문서입니다.</p>
+<p><a href="getting-started.html">첫 항해 안내</a> · <a href="engineering.html">우주선 공학</a></p></article><footer><a href="design.md">Markdown 원문</a> · © 2026 birdea. All rights reserved.</footer></main>
+<nav class="toc" aria-label="이 페이지 목차"><span>이 페이지</span><a href="#section-1">화면의 역할</a><a href="#section-2">상태와 행동의 연결</a><a href="#section-3">도움 기능</a><a href="#section-4">시각 언어</a></nav>
+</div>
+</body>
+</html>

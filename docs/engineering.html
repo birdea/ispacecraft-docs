@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ispacecraft 공개 소개 문서: 기획, 디자인, 개발, 우주선 공학, 과학과 세계관.">
+<meta name="color-scheme" content="dark">
+<title>우주선 공학 — 움직임과 장비의 연결 · ispacecraft</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#content">본문으로 이동</a>
+<header><a class="brand" href="../index.html">ispacecraft<span>FIELD NOTES / 공개 문서</span></a><a href="https://ispacecraft.com">프로젝트 열기 ↗</a></header>
+<div class="layout">
+<aside><details open><summary>문서 탐색</summary><nav aria-label="분야별 문서"><a href="../index.html">문서 홈</a><a href="../docs/design.html">디자인 — 우주를 보고, 상태를 읽고, 행동하기</a><a href="../docs/development.html">개발 — 시뮬레이션과 화면을 나누기</a><a href="../docs/editorial.html">공개 문서 편집 기준</a><a href="../docs/engineering.html" aria-current="page">우주선 공학 — 움직임과 장비의 연결</a><a href="../docs/getting-started.html">첫 항해 안내</a><a href="../docs/glossary.html">용어집</a><a href="../docs/overview.html">프로젝트 소개</a><a href="../docs/planning.html">기획 — 항해를 이어 가는 선택</a><a href="../docs/roadmap.html">로드맵 — 우주 표현과 탐사의 확장</a><a href="../docs/science.html">과학 — 실제 원리와 프로젝트의 근사</a><a href="../docs/status.html">현재 범위와 FAQ</a><a href="../docs/systems.html">자원과 생존</a><a href="../docs/worldbuilding.html">세계관 — 우주 광석과 개척자들</a></nav></details></aside>
+<main id="content"><div class="eyebrow">BIRDEA / 2026.11.02</div><article><h1 id="section-0">우주선 공학 — 움직임과 장비의 연결</h1>
+<p>이 문서는 ispacecraft 속 우주선과 장비의 동작을 설명합니다. 현실의 제작 도면이나 실제 비행 설계 지침은 아닙니다.</p>
+<h2 id="section-1">선실과 작업 공간</h2>
+<p>시작 우주선은 캡슐형 선실과 몸통 허브, 에어락을 연결한 구조입니다. 선내를 이동하고 조종석에 앉거나 선외로 나가는 동작이 우주선의 상태와 이어집니다. 조종석·창고·엔진·출입구는 외형 장식과 기능의 관계를 드러내는 요소입니다.</p>
+<p>모듈을 연결해 생활·작업 공간을 늘리는 설계가 있으며, 세부 시설의 존재와 효능은 현재 구현과 장기 기획을 구분해서 봐야 합니다. 인공 중력 조절은 세계관과 시뮬레이션의 규칙입니다.</p>
+<h2 id="section-2">접근·착륙·이륙</h2>
+<p>행성에서는 중력과 제동 거리, 대기·지형을 고려합니다. 자동 이륙은 외부 장치를 정리한 뒤 점화·수직 상승·방향 전환을 진행합니다. 추력이 중량을 넘어야 상승할 수 있으며, 자동 운항도 연료와 비행 능력의 제약을 받습니다.</p>
+<p>소행성 표면에는 작은 상대 속도와 알맞은 자세로 접근해 고정합니다. 이를 위해 소행성에 가상의 행성 중력이나 대기를 추가하는 방식은 쓰지 않습니다. 착륙 다리의 압축 표현은 별도의 다리별 강체·지반 시뮬레이션과 구별됩니다.</p>
+<h2 id="section-3">채굴 장비</h2>
+<div class="table-wrap" role="region" aria-label="장비 표" tabindex="0"><table><thead><tr><th scope="col">장비</th><th scope="col">표현과 동작</th></tr></thead><tbody><tr><td>기본형</td><td>단축 드릴과 소형 모터, 수거 집게로 절삭·수거</td></tr><tr><td>하이브리드</td><td>타격축, 동축 역회전 커터, 밀폐 오거와 집게로 타격·파쇄·수거</td></tr><tr><td>착륙 채굴</td><td>표면 고정, 후드 밀폐, 코어 절삭과 회수의 단계 연결</td></tr></tbody></table></div>
+<p>채굴 장치는 엔진룸 측면의 격리 구획에서 전개·수납합니다. 타격과 파쇄가 눈에 보이더라도 광석은 정해진 수거·회수 단계에서만 이동합니다. 중지·저장·복원에서도 이미 회수한 양을 다시 지급하지 않는 것이 중요합니다.</p>
+<p>역회전 커터는 장비 표현의 한 요소이며 모든 반력을 없앤다는 가정은 하지 않습니다. 진공에서 주변 공기를 빨아들여 광석을 운반하는 설정도 쓰지 않습니다. 불꽃·섬광·파편은 상태를 읽게 하는 정성적 시각 효과입니다.</p>
+<h2 id="section-4">도킹</h2>
+<p>정거장 도킹은 거래·정비를 위한 접속입니다. 협동 플레이의 우주선 간 도킹은 상대 운동과 연결 상태를 다룹니다. 장기 기획의 연합·산소 공유·터널 통행까지 모두 제공한다는 의미는 아닙니다.</p>
+<p><a href="science.html">과학과 근사</a> · <a href="systems.html">자원과 생존</a></p></article><footer><a href="engineering.md">Markdown 원문</a> · © 2026 birdea. All rights reserved.</footer></main>
+<nav class="toc" aria-label="이 페이지 목차"><span>이 페이지</span><a href="#section-1">선실과 작업 공간</a><a href="#section-2">접근·착륙·이륙</a><a href="#section-3">채굴 장비</a><a href="#section-4">도킹</a></nav>
+</div>
+</body>
+</html>

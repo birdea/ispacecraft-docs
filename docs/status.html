@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ispacecraft 공개 소개 문서: 기획, 디자인, 개발, 우주선 공학, 과학과 세계관.">
+<meta name="color-scheme" content="dark">
+<title>현재 범위와 FAQ · ispacecraft</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#content">본문으로 이동</a>
+<header><a class="brand" href="../index.html">ispacecraft<span>FIELD NOTES / 공개 문서</span></a><a href="https://ispacecraft.com">프로젝트 열기 ↗</a></header>
+<div class="layout">
+<aside><details open><summary>문서 탐색</summary><nav aria-label="분야별 문서"><a href="../index.html">문서 홈</a><a href="../docs/design.html">디자인 — 우주를 보고, 상태를 읽고, 행동하기</a><a href="../docs/development.html">개발 — 시뮬레이션과 화면을 나누기</a><a href="../docs/editorial.html">공개 문서 편집 기준</a><a href="../docs/engineering.html">우주선 공학 — 움직임과 장비의 연결</a><a href="../docs/getting-started.html">첫 항해 안내</a><a href="../docs/glossary.html">용어집</a><a href="../docs/overview.html">프로젝트 소개</a><a href="../docs/planning.html">기획 — 항해를 이어 가는 선택</a><a href="../docs/roadmap.html">로드맵 — 우주 표현과 탐사의 확장</a><a href="../docs/science.html">과학 — 실제 원리와 프로젝트의 근사</a><a href="../docs/status.html" aria-current="page">현재 범위와 FAQ</a><a href="../docs/systems.html">자원과 생존</a><a href="../docs/worldbuilding.html">세계관 — 우주 광석과 개척자들</a></nav></details></aside>
+<main id="content"><div class="eyebrow">BIRDEA / 2026.11.02</div><article><h1 id="section-0">현재 범위와 FAQ</h1>
+<p>기준일: <strong>2026-11-02</strong>. 내부 개발 문서 기준의 설명이며 운영 배포의 기능·버전과 다를 수 있습니다. 향후 일정이나 성능 수치를 보장하지 않습니다.</p>
+<h2 id="section-1">상태 구분</h2>
+<div class="table-wrap" role="region" aria-label="표기 표" tabindex="0"><table><thead><tr><th scope="col">표기</th><th scope="col">의미</th></tr></thead><tbody><tr><td>현재</td><td>개발 문서에서 구현을 확인한 범위</td></tr><tr><td>계획</td><td>추진 방향이 정해졌지만 구현 전인 범위</td></tr><tr><td>구상·제안</td><td>상세 설계나 승인·검증이 더 필요한 내용</td></tr></tbody></table></div>
+<h2 id="section-2">기능 상태</h2>
+<div class="table-wrap" role="region" aria-label="분야 표" tabindex="0"><table><thead><tr><th scope="col">분야</th><th scope="col">현재</th><th scope="col">이후 계획·구상</th></tr></thead><tbody><tr><td>이동</td><td>선내·선외·조종, AI 항법, 궤도·착륙</td><td>더 넓은 천체 탐사와 항법 확장</td></tr><tr><td>자원</td><td>채굴·전환·창고, 정거장 거래·정비</td><td>자원·장비와 항해 선택의 확장</td></tr><tr><td>화면</td><td>AI 패드, 네비게이션, 도움 기능</td><td>천체·지형의 표현 개선</td></tr><tr><td>저장</td><td>기기 내 자동·수동 저장, 세계 파일 교환</td><td>향후 저장·공간 구조 검토</td></tr><tr><td>협동</td><td>방 코드·승인 기반 P2P, 참가자 상태 교환</td><td>서버 권위의 지속 온라인 우주</td></tr><tr><td>캠페인</td><td>첫 항해, 태양계, 함대전 탈출·구조·고물상</td><td>지구 궤도 위성 캠페인</td></tr><tr><td>세계관</td><td>개척과 우주 광석을 배경으로 한 항해</td><td>안드로이드 동료·연합·외계 문명</td></tr></tbody></table></div>
+<h2 id="section-3">모든 참가자가 자원을 공유하나요?</h2>
+<p>현재 P2P는 모든 세계 상태를 하나로 맞추는 구조가 아닙니다. 광상 채굴과 정거장 거래 같은 변경은 기기별 차이가 생길 수 있습니다. 완전한 공동 경제나 서버가 검증하는 자원 공유를 제공한다고 해석하지 않아야 합니다.</p>
+<h2 id="section-4">저장은 클라우드 계정에 보관되나요?</h2>
+<p>현재 기기·브라우저에 보관합니다. 공유 창고 역시 기기 내 데이터이며, 이름에 ‘공유’가 있어도 다른 기기의 계정 클라우드 저장을 뜻하지 않습니다. 세계 내보내기에는 별도 창고·캠페인 기록이 모두 포함되지 않습니다.</p>
+<h2 id="section-5">과학 수치는 모두 현실과 같나요?</h2>
+<p>관성과 중력 등에서 실제 원리를 참고하지만 거리·시간·자원·피폭·장치에는 근사와 허구가 있습니다. <a href="science.html">과학 문서</a>에서 구분을 설명합니다.</p>
+<h2 id="section-6">소스코드를 받을 수 있나요?</h2>
+<p>이 저장소는 공개 소개 문서용입니다. 앱 소스와 원본 개발 자료는 별도 비공개 저장소에서 관리합니다. 문서의 공개가 앱 코드나 자료의 오픈소스 전환을 뜻하지 않습니다.</p>
+<h2 id="section-7">HTML은 어디서 읽나요?</h2>
+<p>저장소의 index.html을 브라우저로 열면 문서 전체를 탐색할 수 있습니다. GitHub의 파일 화면은 HTML 소스 보기이며 실제 페이지 호스팅과 다릅니다. 이 저장소를 만들었다고 GitHub Pages가 자동 활성화되지는 않습니다.</p>
+<p><a href="overview.html">소개</a> · <a href="roadmap.html">로드맵</a> · <a href="editorial.html">편집 기준</a></p></article><footer><a href="status.md">Markdown 원문</a> · © 2026 birdea. All rights reserved.</footer></main>
+<nav class="toc" aria-label="이 페이지 목차"><span>이 페이지</span><a href="#section-1">상태 구분</a><a href="#section-2">기능 상태</a><a href="#section-3">모든 참가자가 자원을 공유하나요?</a><a href="#section-4">저장은 클라우드 계정에 보관되나요?</a><a href="#section-5">과학 수치는 모두 현실과 같나요?</a><a href="#section-6">소스코드를 받을 수 있나요?</a><a href="#section-7">HTML은 어디서 읽나요?</a></nav>
+</div>
+</body>
+</html>

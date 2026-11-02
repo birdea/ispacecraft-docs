@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ispacecraft 공개 소개 문서: 기획, 디자인, 개발, 우주선 공학, 과학과 세계관.">
+<meta name="color-scheme" content="dark">
+<title>로드맵 — 우주 표현과 탐사의 확장 · ispacecraft</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#content">본문으로 이동</a>
+<header><a class="brand" href="../index.html">ispacecraft<span>FIELD NOTES / 공개 문서</span></a><a href="https://ispacecraft.com">프로젝트 열기 ↗</a></header>
+<div class="layout">
+<aside><details open><summary>문서 탐색</summary><nav aria-label="분야별 문서"><a href="../index.html">문서 홈</a><a href="../docs/design.html">디자인 — 우주를 보고, 상태를 읽고, 행동하기</a><a href="../docs/development.html">개발 — 시뮬레이션과 화면을 나누기</a><a href="../docs/editorial.html">공개 문서 편집 기준</a><a href="../docs/engineering.html">우주선 공학 — 움직임과 장비의 연결</a><a href="../docs/getting-started.html">첫 항해 안내</a><a href="../docs/glossary.html">용어집</a><a href="../docs/overview.html">프로젝트 소개</a><a href="../docs/planning.html">기획 — 항해를 이어 가는 선택</a><a href="../docs/roadmap.html" aria-current="page">로드맵 — 우주 표현과 탐사의 확장</a><a href="../docs/science.html">과학 — 실제 원리와 프로젝트의 근사</a><a href="../docs/status.html">현재 범위와 FAQ</a><a href="../docs/systems.html">자원과 생존</a><a href="../docs/worldbuilding.html">세계관 — 우주 광석과 개척자들</a></nav></details></aside>
+<main id="content"><div class="eyebrow">BIRDEA / 2026.11.02</div><article><h1 id="section-0">로드맵 — 우주 표현과 탐사의 확장</h1>
+<p>기준일: 2026-11-02. 다음은 향후 방향이며 출시 일정은 정해지지 않았습니다. 세부 구현 순서·데이터 공급 경로·기술 선택·임무 구성은 제안 단계가 포함됩니다.</p>
+<h2 id="section-1">현재 기반</h2>
+<p>3D 브라우저 환경에서 선내·선외 이동, 비행·항법, 탐사·채굴·거래, 저장, 캠페인과 P2P 협동을 연결하고 있습니다. 기존 항해 경험을 유지하면서 천체와 장비의 표현을 발전시킵니다.</p>
+<h2 id="section-2">추진 방향 — 구현 전</h2>
+<div class="table-wrap" role="region" aria-label="방향 표" tabindex="0"><table><thead><tr><th scope="col">방향</th><th scope="col">목표</th></tr></thead><tbody><tr><td>태양과 행성</td><td>실제 외관에 가까운 표현을 우선 개선하고 이후 약한 카툰 쉐이딩 검토</td></tr><tr><td>광원</td><td>항성의 빛, 밝기·가림, 대기와 재질 반응 개선</td></tr><tr><td>지형·지물</td><td>궤도에서 도보까지 이어지는 지형과 근거리 디테일</td></tr><tr><td>별과 성계</td><td>고유 위치·정체성을 가진 탐색·방문 대상으로 연결</td></tr><tr><td>블랙홀</td><td>렌즈 효과와 접근 위험을 가진 천체 표현</td></tr><tr><td>위성·탐사선</td><td>실존 임무의 대상·궤적·정보를 태양계 탐사에 연결</td></tr><tr><td>지구 궤도 캠페인</td><td>약 16,000개 규모를 목표로 하는 인공위성 표현</td></tr></tbody></table></div>
+<p>위성의 목표 규모는 실시간 실제 위성 수에 대한 통계가 아닙니다. 최종 등장 수는 채택한 데이터와 기준 시각·대상 정의에 따라 정해야 합니다. 실제 궤적 연동과 대규모 캠페인은 아직 구현되지 않았습니다.</p>
+<h2 id="section-3">상세 설계 제안</h2>
+<p>먼 천체는 간단히, 가까운 대상은 자세히 표현하고 필요한 구역만 생성·유지하는 방식을 검토합니다. 같은 천체를 지도·선택·추적·도착 위치가 일관되게 가리키고 저장 후에도 정체성이 유지되는 것이 기준입니다.</p>
+<p>블랙홀은 먼저 단순한 근사 모델을 검증한 뒤 표현을 확장합니다. 위성·탐사선은 소수의 대표 대상에서 위치·시간·추적을 검증한 후 목록을 늘리는 접근을 검토합니다. 관측·접근·귀환 임무의 구체적인 구성은 제안입니다.</p>
+<h2 id="section-4">장기 구상</h2>
+<p>연합, 평판, 안드로이드 동료, 외계 문명과 지속 온라인 우주는 더 먼 구상입니다. 현재 P2P 협동의 한계를 해소하고 공유 세계를 어떻게 운영할지는 별도의 설계와 검증이 필요합니다.</p>
+<p><a href="status.html">현재 범위</a> · <a href="development.html">개발</a></p></article><footer><a href="roadmap.md">Markdown 원문</a> · © 2026 birdea. All rights reserved.</footer></main>
+<nav class="toc" aria-label="이 페이지 목차"><span>이 페이지</span><a href="#section-1">현재 기반</a><a href="#section-2">추진 방향 — 구현 전</a><a href="#section-3">상세 설계 제안</a><a href="#section-4">장기 구상</a></nav>
+</div>
+</body>
+</html>
